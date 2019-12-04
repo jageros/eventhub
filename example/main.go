@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/lhj168os/eventhub"
+	"github.com/jageros/eventhub"
 )
 
 func main() {
