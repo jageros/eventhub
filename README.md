@@ -1,9 +1,8 @@
 # eventhub
-> Subscribe/Publish event in program.
-> golang程序员中发布监听事件
+Subscribe/Publish event in program.
 
 ## 这是什么？
-> 这是一个开源的用于golang程序内部发布和监听事件的package，其原理是通过定义一个全局变量存储监听的事件id和对应的handle函数，当发布事件时，通过事件id查找对应的handle，如果找到则执行该handle函数。
++ 这是一个开源的用于golang程序内部发布和监听事件的package，其原理是通过定义一个全局变量存储监听的事件id和对应的handle函数，当发布事件时，通过事件id查找对应的handle，如果找到则执行该handle函数。
 
 ## 使用说明
 ### 安装
