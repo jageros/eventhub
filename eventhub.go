@@ -79,7 +79,7 @@ func Unsubscribe(eventID int, seq int) {
 
 /*******************************************
  * func： 对执行的handle捕获异常并恢复
- * f  需要执行法人函数
+ * f  需要执行的函数
  * return err 执行f返回的错误
  *******************************************/
 func catchPanic(f func()) (err interface{}) {
