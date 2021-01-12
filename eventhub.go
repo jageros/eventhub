@@ -1,6 +1,8 @@
 package eventhub
 
-import "log"
+import (
+	"log"
+)
 
 var (
 	maxSeq    = 0
@@ -49,7 +51,7 @@ func Publish(eventID int, args ...interface{}) {
 			l.handler(args...)
 		})
 		if err != nil {
-			log.Printf("eventId=%d, seq=%d, handle err=%v\n", eventID, l.seq, err)
+			log.Printf("[github.com/jageros/eventhub] eventId=%d, seq=%d, handle err=%v", eventID, l.seq, err)
 		}
 	}
 }
@@ -86,7 +88,7 @@ func catchPanic(f func()) (err interface{}) {
 	defer func() {
 		err = recover()
 		if err != nil {
-			log.Printf("CatchPanic panic: 【%s】\n", err)
+			log.Printf("[github.com/jageros/eventhub] CatchPanic panic: err=%v", err)
 		}
 	}()
 
